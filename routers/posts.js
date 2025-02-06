@@ -61,11 +61,19 @@ router.get('/', function (req, res) {
 
 // show
 router.get('/:id', function (req, res) {
-	res.json({
-    message: 'Dettagli del post n° ' + req.params.id,
-    posts:posts[0]
-  })
+    const postId = req.params.id;
+    const foundPost = posts.find(post => post.id == postId);
+
+    if (foundPost) {
+        res.json({
+            message: `Dettagli del post n° ${postId}`,
+            post: foundPost
+        });
+    } else {
+        res.status(404).json({ message: "Post non trovato" });
+    }
 });
+
 //store
 router.post('/', function (req, res) {
 	res.send(`Creazione nuovo post`);
