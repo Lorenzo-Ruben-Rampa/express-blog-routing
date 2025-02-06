@@ -1,16 +1,16 @@
 {
-  "name": "express-blog-intro",
+  "name": "express-blog-routing",
   "version": "1.0.0",
   "description": "blog personale",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "watch": "node --watch index.js"
+    "start": "node app.js",
+    "watch": "node --watch app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Lorenzo-Ruben-Rampa/express-blog-intro.git"
+    "url": "git+https://github.com/Lorenzo-Ruben-Rampa/express-blog-routing.git"
   },
   "keywords": [
     "titolo",
@@ -21,9 +21,9 @@
   "author": "Lorenzo Rampa",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Lorenzo-Ruben-Rampa/express-blog-intro/issues"
+    "url": "https://github.com/Lorenzo-Ruben-Rampa/express-blog-routing/issues"
   },
-  "homepage": "https://github.com/Lorenzo-Ruben-Rampa/express-blog-intro#readme",
+  "homepage": "https://github.com/Lorenzo-Ruben-Rampa/express-blog-routing#readme",
   "dependencies": {
     "express": "^4.21.2"
   }

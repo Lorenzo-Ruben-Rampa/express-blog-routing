@@ -13,6 +13,9 @@ app.get('/', (req, res) => {
 	res.send( 'Server del mio blog')
 })
 
+// Utilizzo la rotta posts per definire la parte iniziale delle rotte
+app.use('/posts', postsRouter)
+
 // Definisco la rotta bacheca
 app.get('/bacheca', (req, res) => {
     const posts = [

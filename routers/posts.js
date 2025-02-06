@@ -1,9 +1,9 @@
 // Importo express e uso parte routing
 const express = require('express')
-const router = express.router();
+const router = express.Router();
 
 // Rotte CRUD
-router.get('/', function (req, res) {
+router.get('/posts', function (req, res) {
 	res.send(`Lista dei post`);
 });
 router.get('/posts/:id', function (req, res) {
@@ -13,8 +13,8 @@ router.post('/posts', function (req, res) {
 	res.send(`Creazione nuovo post`);
 });
 
-router.post('/posts/1', function (res, req) {
-  res.send(`Cancellazione del post 1`);
+router.post('/posts/:id', function (res, req) {
+  res.send(`Cancellazione del post` + req.params.id);
 });
 
 const posts = [
