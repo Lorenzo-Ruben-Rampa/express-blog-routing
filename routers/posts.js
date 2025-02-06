@@ -1,25 +1,21 @@
 // Importo express e uso parte routing
-router.get('/posts', function (req, res) {
-	res.send(`Lista delle pietanze`);
-});
-router.get('/posts/:id', function (req, res) {
-	res.send(`Dettagli della pietanza` + req.params.id);
-});
-router.post('/posts', function (req, res) {
-	res.send(`Creazione nuova pietanza`);
-});
-
-// Rotte CRUD
 const express = require('express')
 const router = express.router();
+
+// Rotte CRUD
 router.get('/', function (req, res) {
-	res.send('Lista delle pietanze');
+	res.send(`Lista dei post`);
 });
-router.get('/:id', function(req, res) {
-	res.send(`Dettagli della pietanza` + req.params.id);
+router.get('/posts/:id', function (req, res) {
+	res.send(`Dettagli dei post` + req.params.id);
+});
+router.post('/posts', function (req, res) {
+	res.send(`Creazione nuovo post`);
 });
 
-
+router.post('/posts/1', function (res, req) {
+  res.send(`Cancellazione del post 1`);
+});
 
 const posts = [
   {
