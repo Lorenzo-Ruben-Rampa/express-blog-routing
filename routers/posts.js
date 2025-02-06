@@ -61,7 +61,10 @@ router.get('/', function (req, res) {
 
 // show
 router.get('/:id', function (req, res) {
-	res.send(`Dettagli del post n° ` + req.params.id);
+	res.json({
+    message: 'Dettagli del post n° ' + req.params.id,
+    posts:posts[0]
+  })
 });
 //store
 router.post('/', function (req, res) {
