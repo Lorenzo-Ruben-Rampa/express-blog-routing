@@ -52,7 +52,8 @@ app.get('/bacheca', (req, res) => {
     ]
     res.json(posts);
 })
-    
+
+// Avvio server
 app.listen(port, () => {
 	console.log(`Example app listening on port ${port}`)
 })

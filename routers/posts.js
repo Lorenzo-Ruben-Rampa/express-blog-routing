@@ -1,5 +1,5 @@
 // Importo express e uso parte routing
-const express = require('express')
+const express = require ('express')
 const router = express.Router();
 
 // Rotte CRUD
@@ -63,5 +63,5 @@ const posts = [
 ];
 
 // Esporto la parte di routing
-module.exports = posts;
+module.exports = router;
 
