@@ -1,6 +1,6 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require('express');
+const app = express();
+const port = 3000;
 
 // Importo il file del routing
 const postsRouter = require('./routers/posts');
@@ -62,7 +62,6 @@ app.get('/bacheca', (req, res) => {
             tags: ["Dolci", "Dolci al cioccolato", "Torte", "Ricette vegetariane", "Ricette al forno"],
           },
      ];
-    res.json(posts);
 })
 
 // Avvio server
